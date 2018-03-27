@@ -2,6 +2,7 @@ class LunchPostsController < ApplicationController
 
   before_action :authenticate_user!, only: [:new]
   before_action :set_lunch_post, only: [:edit, :update, :destroy]
+  before_action :posted_user?, only: [:edit, :update, :destroy]
 
   def index 
     @lunch_posts = LunchPost.is_active
@@ -53,6 +54,12 @@ class LunchPostsController < ApplicationController
 
     def set_lunch_post
       @lunch_post = LunchPost.find(params[:id])
+    end
+
+    def posted_user?
+      unless current_user == @lunch_post.user
+        redirect_to root_path
+      end
     end
 
 end
