@@ -1,0 +1,12 @@
+= link_to "新規投稿", new_post_path
+- @lunch_posts.each do |post|
+  div
+    = post.title 
+    = post.shop_name
+    = post.price
+    = image_tag(post.image_path)
+    br
+    - if current_user.present? && current_user == post.user
+      = link_to "削除", post_path(post.id.to_i), method: :delete
+      br
+      = link_to "編集する", edit_post_path(post.id)
