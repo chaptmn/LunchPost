@@ -7,6 +7,10 @@ class LunchPostsController < ApplicationController
     @lunch_posts = LunchPost.is_active
   end
 
+  def show
+    redirect_back(fallback_location: root_path)
+  end
+
   def new 
     @lunch_post = LunchPost.new
   end

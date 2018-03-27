@@ -1,4 +1,4 @@
-= form_with model: post, url: url do |f|
+= form_with model: post, url: url, local: true do |f|
   = f.hidden_field :user_id, value: current_user.id
   = f.hidden_field :prefecture_id, value: 1
   = f.hidden_field :station_id, value: 1
