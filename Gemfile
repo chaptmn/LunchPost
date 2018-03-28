@@ -6,10 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-gem 'carrierwave'
 gem 'slim'
 gem 'carrierwave'
 gem 'rmagick', require: 'RMagick'
+gem 'jquery-rails'
+gem 'whenever'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'

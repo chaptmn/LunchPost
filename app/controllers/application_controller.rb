@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def back_redirect
+    redirect_back(fallback_location: root_path)
+  end
+
   protected
 
   def configure_permitted_parameters
@@ -9,4 +13,5 @@ class ApplicationController < ActionController::Base
       user_params.permit(:email, :password, :name, :image_path)
     end
   end
+
 end
