@@ -19,6 +19,7 @@ log/*
 /node_modules
 /yarn-error.log
 vendor/bundle
+chef/vendor/bundle
 public/uploads
 /tmp
 

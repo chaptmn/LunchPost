@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/Users/endo-yuta/Documents/work-space/study-otsuka-in/chef","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

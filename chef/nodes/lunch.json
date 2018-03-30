@@ -1,0 +1,12 @@
+{
+  "run_list": [
+    "recipe[yum-epel]",
+    "recipe[dstat]",
+    "recipe[nginx]",
+    "recipe[mysql]",
+    "recipe[ruby-env]"
+  ],
+  "automatic": {
+    "ipaddress": "lunch"
+  }
+}
